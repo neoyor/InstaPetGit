@@ -1,4 +1,4 @@
-'use strict';
+use strict';
 
 var http    = require('http');
 var express = require('express');
@@ -10,12 +10,11 @@ var options, app;
 options = {
     onconfig: function (config, next) {
 
-      //var dbData = config.get('databaseConfig');
+      var dbData = config.get('databaseConfig');
 
-      //var dbConnectionString = dbData.mongoDbUrl + dbData.dbName;
+      var dbConnectionString = dbData.mongoDbUrl + dbData.dbName;
 
-      //mongoose.connect(dbConnectionString);
-      mongoose.connect('mmongodb://admin:A8LDUZXsiChn@localhost:27017/imagenes');
+      mongoose.connect(dbConnectionString);
 
       var database = mongoose.connection;
 
