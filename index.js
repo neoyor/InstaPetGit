@@ -15,7 +15,7 @@ options = {
       //var dbConnectionString = dbData.mongoDbUrl + dbData.dbName;
 
       //mongoose.connect(dbConnectionString);
-      mongoose.connect('mongodb://localhost:27017/imagenes');
+      mongoose.connect('mmongodb://admin:A8LDUZXsiChn@localhost:27017/imagenes');
 
       var database = mongoose.connection;
 
