@@ -1,21 +1,4 @@
 {
-    "databaseConfig": {
-        "mongoDbUrl" : "env:OPENSHIFT_MONGODB_DB_URL",
-        "dbName": "env:OPENSHIFT_APP_NAME"
-    },
-
-    "winstonConfig": {
-        "collection" : "logs",
-        "level" : "info",
-        "colorize": true,
-        "safe"  : "false",
-        "host"  : "env:OPENSHIFT_MONGODB_DB_HOST",
-        "port"  : "env:OPENSHIFT_MONGODB_DB_PORT",
-        "username"  : "env:OPENSHIFT_MONGODB_DB_USERNAME",
-        "password"  : "env:OPENSHIFT_MONGODB_DB_PASSWORD",
-        "db"    : "env:OPENSHIFT_APP_NAME"
-    },
-
     "middleware": {
 
         "static": {
@@ -23,11 +6,14 @@
                 "arguments": [ "path:./.build" ]
             }
         }
+
         ,"router": {
             "module": {
                 "arguments": [{ "directory": "path:./controllers" }]
             }
         }
+
+
         ,"expressView": {
             "priority": 100,
             "enabled": true,
@@ -35,20 +21,21 @@
                 "name": "engine-munger/lib/expressView"
             }
         },
-        "appsec": {
-            "enabled": true,
-            "priority": 110,
-            "module": {
-                "name": "lusca",
-                "arguments": [
-                    {
-                        "csrf": false,
-                        "p3p": false,
-                        "csp": false
-                    }
-                ]
-            }
-        }
 
+        "appsec": {
+          "enabled": true,
+          "priority": 100,
+          "module": {
+            "name": "lusca",
+            "arguments": [
+              {
+                "csrf": false,
+                "p3p": false,
+                "xframe": "SAME-ORIGIN",
+                "csp": false
+              }
+            ]
+          }
+        }
     }
 }

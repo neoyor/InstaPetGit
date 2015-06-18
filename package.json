@@ -1,8 +1,8 @@
 {
-  "name": "InstaPetGit",
-  "version": "1.0.0",
-  "description": "Primera version",
-  "author": "@metanix",
+  "name": "unab-first-rest-sample",
+  "version": "0.1.0",
+  "description": "UNAB first REST sample",
+  "author": "@mreyescano",
   "main": "index.js",
   "scripts": {
     "test": "grunt test"
@@ -12,10 +12,7 @@
     "express": "^4.3.0",
     "kraken-devtools": "^1.0.0",
     "kraken-js": "^1.0.1",
-    "localizr": "^0.1.0",
-    "mongoose": "^4.0.2",
-    "winston": "^1.0.0",
-    "winston-mongodb": "^1.1.1"
+    "localizr": "^0.1.0"
   },
   "devDependencies": {
     "grunt": "^0.4.1",
