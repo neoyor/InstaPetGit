@@ -1,8 +1,8 @@
 {
-  "name": "unab-rest-and-mobile-example",
-  "version": "0.1.0",
-  "description": "UNAB first REST sample",
-  "author": "@mreyescano",
+  "name": "InstaPetGit",
+  "version": "1.0.0",
+  "description": "Primera version",
+  "author": "@metanix",
   "main": "index.js",
   "scripts": {
     "test": "grunt test"
