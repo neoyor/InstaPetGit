@@ -1,12 +1,14 @@
 'use strict';
 
-var productsLib = require('../../../lib/productsLib');
+var imagenesLib = require('../../../lib/imagenesLib');
 
 module.exports = function (router) {
 
   router.get('/', function (req, res) {
 
-    productsLib.getAll(function(error, results){
+    imagenesLib.getAll(function(error, results){
+
+      res.setHeader('Access-Control-Allow-Origin','*');
 
       if (error){
         return res.status(500).json(error).end();
@@ -22,7 +24,7 @@ module.exports = function (router) {
 
     var id = req.params.id;
 
-    productsLib.getById(id, function(error, product){
+    imagenesLib.getById(id, function(error, imagen){
 
       if (error){
         if (error.message === 'NOT_FOUND'){
@@ -31,16 +33,16 @@ module.exports = function (router) {
         return res.status(500).json(error).end();
       }
 
-      res.status(200).json(product).end();
+      res.status(200).json(imagen).end();
 
     });
   });
 
   router.post('/', function (req, res) {
 
-    var newProduct = req.body;
+    var newImagen = req.body;
 
-    productsLib.create(newProduct, function(error){
+    imagenesLib.create(newImagen, function(error){
 
       if (error){
         return res.status(500).json(error).end();
@@ -56,7 +58,7 @@ module.exports = function (router) {
     var id = req.params.id;
     var newData = req.body;
 
-    productsLib.update(id, newData, function(error, product){
+    imagenesLib.update(id, newData, function(error, imagen){
 
       if (error){
         if (error.message === 'NOT_FOUND'){
@@ -65,7 +67,7 @@ module.exports = function (router) {
         return res.status(500).json(error).end();
       }
 
-      res.status(200).json(product).end();
+      res.status(200).json(imagen).end();
 
     });
   });
@@ -74,7 +76,7 @@ module.exports = function (router) {
 
     var id = req.params.id;
 
-    productsLib.delete(id, function(error, product){
+    imagenesLib.delete(id, function(error, imagen){
 
       if (error){
         if (error.message === 'NOT_FOUND'){
