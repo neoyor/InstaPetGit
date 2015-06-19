@@ -2,7 +2,7 @@
   "name": "unab-first-rest-sample",
   "version": "0.1.0",
   "description": "UNAB first REST sample",
-  "author": "@mreyescano",
+  "author": "@metanix",
   "main": "index.js",
   "scripts": {
     "test": "grunt test"
