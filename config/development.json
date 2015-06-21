@@ -1,7 +1,7 @@
 {
   "databaseConfig": {
     "mongoDbUrl" : "mongodb://localhost:8000/",
-    "dbName": "unabexample"
+    "dbName": "unabinstapetdb"
   },
 
   "winstonConfig": {
@@ -9,7 +9,7 @@
       "level" : "debug",
       "colorize": true,
       "safe"  : "false",
-      "dbUri" : "mongodb://localhost:8000/unabexample"
+      "dbUri" : "mongodb://localhost:8000/instapetdb"
   },
 
   "middleware": {

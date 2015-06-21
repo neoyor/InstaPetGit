@@ -1,7 +1,7 @@
 {
-  "name": "unab-first-rest-sample",
+  "name": "InstaPet",
   "version": "0.1.0",
-  "description": "UNAB first REST sample",
+  "description": "InstaPet",
   "author": "@metanix",
   "main": "index.js",
   "scripts": {
