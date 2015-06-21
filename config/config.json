@@ -45,7 +45,7 @@
                         "csrf": false,
                         "p3p": false,
                         "csp": false
-                    }
+                    }   
                 ]
             }
         }

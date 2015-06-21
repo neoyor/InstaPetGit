@@ -7,10 +7,11 @@ language: node_js
 # version numbers
 node_js:
   - "0.10"
-
+  
 env:
   global:
-    - OPENSHIFT_REPO=ssh://5556337ce0b8cda12b00013e@nodejs-instapet1.rhcloud.com/~/git/nodejs.git/
+ 
+    - OPENSHIFT_REPO=ssh://55838daf5973caa188000076@instapet-cloudunab.rhcloud.com/~/git/instapet.git/
 
 before_install:
   - git remote -v | grep ^openshift || git remote add -m master openshift $OPENSHIFT_REPO
@@ -29,5 +30,4 @@ after_success:
 
 notifications:
     email:
-        - manuel@23people.co
-        - marcelo@23people.co
+        - metanix.18@gmail.com
